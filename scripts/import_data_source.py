@@ -13,7 +13,7 @@ current_dir = os.path.abspath(os.getcwd())
 parent_dir = os.path.abspath(os.path.join(current_dir, os.pardir))
 
 # Set file path to the json file with card data downloaded directly from scryfall
-file_path = os.path.join(parent_dir, 'data', 'default-cards-20221230100442.json')
+file_path = os.path.join(parent_dir, 'data', 'default-cards-20230308220851.json')
 
 print(file_path)
 
@@ -42,7 +42,7 @@ lexicon = df_source[[
     'card_faces',
 ]]
 
-lexicon.to_feather('mtg_card_database')
+lexicon.to_feather('mtg_card_database.feather')
 
 def get_card_data():
-    return pd.read_feather(path='mtg_card_database')
+    return pd.read_feather(path='mtg_card_database.feather')
