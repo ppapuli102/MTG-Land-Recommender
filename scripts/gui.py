@@ -21,7 +21,7 @@ def CreateGUI():
     def retreive_text():
         global imported_deck
         imported_deck = text_box.get()
-        main.ConvertDeckList(imported_deck)
+        # main.ConvertDeckList(imported_deck)
 
     # Create a button and set its text
     button = tk.Button(text="Import", command=retreive_text)
