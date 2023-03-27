@@ -3,13 +3,9 @@
 
 # %%
 import pandas as pd
-import numpy as np
 from tqdm import tqdm
 import os
-import logging
 import warnings
-from IPython.display import display, HTML
-
 
 # %%
 # Get the absolute path of the current working directory
@@ -26,6 +22,9 @@ deck_fp = os.path.join(parent_dir, 'data', 'decks.feather')
 
 card_df = pd.read_feather(card_fp)
 deck_df = pd.read_feather(deck_fp)
+
+# card_df = pd.read_feather('cards.feather')
+# deck_df = pd.read_feather('decks.feather')
 
 # %%
 deck_df = deck_df.reset_index().drop(columns=['index'])
@@ -215,23 +214,6 @@ if __name__ == '__main__':
     pd.options.display.max_columns = 20000
     pd.set_option('display.width', 1000)
 
-    # %%
-    # Define a custom log handler that writes messages to the notebook output
-    class NotebookLogHandler(logging.Handler):
-        def emit(self, record):
-            message = self.format(record)
-            display(HTML(f'<p style="color: {record.levelname.lower()}">{message}</p>'))
-
-    # Create a logger and set its level to INFO
-    logger = logging.getLogger()
-    logger.setLevel(logging.INFO)
-
-    # Create a formatter and add it to the logger
-    formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-    handler = NotebookLogHandler()
-    handler.setFormatter(formatter)
-    logger.addHandler(handler)
-
     # %% [markdown]
     # #### Read in our cards and deck data
 
@@ -284,10 +266,6 @@ if __name__ == '__main__':
         input_reset = input_reset.to_frame()
     if isinstance(output_reset, pd.Series):
         output_reset = output_reset.to_frame()
-
-    # Transpose and reset the column index for input and output DataFrames, then transpose back
-    # input_reset = input_reset.T.reset_index(drop=True).T
-    # output_reset = output_reset.T.reset_index(drop=True).T
 
     # Save the DataFrames to feather format
     input_reset.to_feather(input_fp)
