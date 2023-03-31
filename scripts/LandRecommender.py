@@ -1,11 +1,12 @@
-import pandas as pd
-import numpy as np
-import joblib
-from standardize_io import create_io
-from sklearn.preprocessing import PolynomialFeatures
 import os
 import tkinter as tk
-from tkinter import filedialog, Text
+from tkinter import Text, filedialog
+
+import joblib
+import numpy as np
+import pandas as pd
+from sklearn.preprocessing import PolynomialFeatures
+from standardize_io import create_io
 
 # Get the absolute path of the current working directory
 current_dir = os.path.abspath(os.getcwd())
@@ -14,7 +15,7 @@ current_dir = os.path.abspath(os.getcwd())
 parent_dir = os.path.abspath(os.path.join(current_dir, os.pardir))
 
 # Read our card database
-file_path = os.path.join(parent_dir, 'models', 'rf_multi_poly_model.joblib.z')
+file_path = os.path.join(parent_dir, 'models', 'rf_multi_poly_model_no_outliers.joblib.z')
 
 # Load the trained model from the joblib file
 model = joblib.load(file_path)
