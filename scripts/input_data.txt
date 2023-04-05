@@ -1,21 +1,17 @@
-3 Abrade
-3 Blackcleave Cliffs
-1 Bladecoil Serpent
-4 Bloodtithe Harvester
-1 Brotherhood's End
-4 Corpse Appraiser
-3 Darkslick Shores
-4 Fable of the Mirror-Breaker
-3 Go for the Throat
-3 Haunted Ridge
-4 Invoke Despair
-3 Make Disappear
-2 Negate
-3 Reckoner Bankbuster
-2 Sheoldred, the Apocalypse
-4 Shipwreck Marsh
-3 Shivan Reef
-4 Sulfurous Springs
-1 Swamp
-1 Takenuma, Abandoned Mire
-4 Xander's Lounge
+2 Drag Under
+1 Geist of the Archives
+2 Ingenious Skaab
+1 Jace's Scrutiny
+1 Nebelgast Herald
+1 Ongoing Investigation
+2 Spontaneous Mutation
+1 Dark Salvation
+1 Briarbridge Patrol
+1 Byway Courier
+1 Deathcap Cultivator
+1 Gnarlwood Dryad
+2 Graf Mole
+2 Noose Constrictor
+1 Obsessive Skinner
+1 Rabid Bite
+2 Ulvenwald Mysteries
